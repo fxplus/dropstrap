@@ -21,7 +21,7 @@ module.exports = function (grunt) {
             },
             prod: {
                 options: {
-                    sassDir: 'custom-sass',
+                    sassDir: 'sass',
                     cssDir: 'css',
                     imagesPath: 'images',
                     noLineComments: true,
