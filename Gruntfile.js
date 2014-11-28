@@ -18,7 +18,7 @@ module.exports = function (grunt) {
                     noLineComments: false,
                     outputStyle: 'nested'
                 }
-            }
+            },
             prod: {
                 options: {
                     sassDir: 'custom-sass',
