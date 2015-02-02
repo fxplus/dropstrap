@@ -1,0 +1,154 @@
+@import 'compass';
+@import 'fx_brand/colours';
+@import 'bootswatch-sass/libly/variables';
+@import 'bootstrap-sass/bootstrap.scss';
+@import 'bootswatch-sass/libly/bootswatch';
+
+/* Custom overrides */
+
+#branding {
+    height: 100px;
+    background-color: $fxdarkblue;
+    h1.site-title {
+        font-weight: normal;
+    }
+    .site-title a {
+        color: white;
+        font-weight: normal;
+    }
+}
+.block-search .input-group-btn {
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+.page-header {
+    margin-top: 20px;
+}
+
+p:last-child {
+    margin-bottom: $padding-large-vertical;
+}
+.field-name-field-image, .media-image {
+    margin-bottom: $padding-large-vertical;
+}
+.media-image {
+    margin-left: $padding-large-vertical;
+}
+
+body.front {
+    #banner {
+        @media (min-width: $screen-sm-min) {
+            background: url(../images/banner/library_banner.jpg) no-repeat;
+            // background: url(../images/banner/library_banner_brighter.jpg) no-repeat;
+            background-position: center 0;
+            .well {
+                background-color: rgba(250,250,250,1);
+                min-height: 220px;
+            }
+        }
+        background-color: #d7eefc;
+        padding-top: $line-height-computed;
+        padding-bottom: $line-height-computed;
+        h2 {
+            color: #333;
+            text-shadow: 0 0 20 #fff;
+        }  
+    }
+    .main-container {
+        padding-top: $line-height-computed;
+        padding-bottom: $line-height-computed;        
+    }
+    .navbar {
+        margin-bottom:0;
+    }
+}
+
+.nav > li > a:hover {
+    background-color: transparent;
+}
+
+a:hover, a:focus {
+    color: $fxdarkblue;
+    text-decoration: none;
+}
+
+.navbar {
+    /* undo overrides.css */
+    #block-search-form {
+        margin-top: 8px;
+    }
+    .btn, .form-group {
+        margin-bottom:0;
+    }
+    .navbar-nav li a:hover,
+    .navbar-brand:hover {
+        color: $fxdarkblue;
+    }
+}
+.strap-shadow {
+    @include box-shadow(0 1px 3px rgba(0,0,0,.5));
+}
+.well {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+.region-sidebar-first {
+    h2.block-title a {
+        color: #15a3bf;
+    }
+    .active-trail, .active {
+        color: $gray-dark;
+    }
+    .active {
+        color: $gray-darker;
+    }
+    ul {
+        padding-left:0;
+        ul {
+            padding-left: $padding-base-horizontal;
+            padding-bottom: $padding-base-vertical;
+            // border-top: 1px solid #ddd;
+            // border-bottom: 1px solid #ddd;
+            // li {
+            //     list-style: disc;
+            // }
+            // margin-left: -($padding-base-horizontal+2);
+            // margin-right: -($padding-base-horizontal+2);
+            // border-left: 1px solid $gray-light;
+        }
+        // ul, .active-trail {
+        //    border-left: 5px solid $gray-light;
+        // }
+    }
+}
+.block {
+    .nav {
+        li {
+            a {
+                padding: 0.2em 0;
+            }
+        }
+    }
+}
+.block-title {
+    margin-top: 0;
+}
+.block.strap-news {
+    .view-content {
+        h2 {
+            font-size: 1.25em;
+        }
+    } 
+}
+.block.strap-tweets {
+    ul li {
+        margin-bottom: 1em;
+    }
+}
+.btn {
+    margin-bottom: 1em;
+    display: block;
+}   

@@ -6,13 +6,14 @@ module.exports = function (grunt) {
                 tasks: ['compass:dev']
             },
            options: {
+                spawn: false,
                 livereload: true,
             },
         },
         compass: {
             dev: {
                 options: {
-                    sassDir: 'custom-sass',
+                    sassDir: 'sass',
                     cssDir: 'css',
                     imagesPath: 'images',
                     noLineComments: false,
