@@ -1,6 +1,6 @@
 <?php
 
-function strapping_process_page(&$variables) {
+function dropstrap_process_page(&$variables) {
   // bootstrap theme functionality
   $variables['navbar_classes'] = implode(' ', $variables['navbar_classes_array']);
 
@@ -15,10 +15,10 @@ function strapping_process_page(&$variables) {
   }
 }
 
-function strapping_menu_link($variables) {
+function dropstrap_menu_link($variables) {
   if ($variables['element']['#original_link']['menu_name'] == 'menu-home-actions') {
     $element = $variables['element'];
-    $output = l($element['#title'], $element['#href'], _strapping_button_attributes($variables['element']['#original_link']));
+    $output = l($element['#title'], $element['#href'], _dropstrap_button_attributes($variables['element']['#original_link']));
     return $output."\n";
     // return '<li' . drupal_attributes($element['#attributes']) . '>'.$output."</li>\n";
   } else {
@@ -33,7 +33,7 @@ function strapping_menu_link($variables) {
 //   }
 // }
 
-function _strapping_button_attributes($menu_link = FALSE) {
+function _dropstrap_button_attributes($menu_link = FALSE) {
   if (!$menu_link) {
     $attributes = array('attributes' => array(
       'class' => array('btn', 'btn-info', 'btn-large', 'catalog-link'),
